@@ -22,7 +22,7 @@ class Testcalc(unittest.TestCase):
 
     def test_devide(self):
         self.assertEqual(app.devide(self.x, self.y), 2)
-        self.assertEqual(app.devide(5, 2), 2.5)
+        self.assertEqual(app.devide(5, 2), 2)
         self.assertRaises(ValueError, app.devide, 10, 0)
         with self.assertRaises(ValueError):
            app.devide(10, 0)
