@@ -1,5 +1,5 @@
 import unittest
-import short_tweeter
+from app import short_tweeter
 from mock import Mock
 
 
