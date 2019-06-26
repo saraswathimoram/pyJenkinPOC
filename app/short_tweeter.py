@@ -18,7 +18,7 @@ def tweet(api, message):
 
 def main():
     """ This function will tweet our message """
-    api = twitter.Api(consumer_key=os.getenv('CONSUMER_KEY'),
+    api = twitter.api(consumer_key=os.getenv('CONSUMER_KEY'),
                       consumer_secret=os.getenv('CONSUMER_SECRET'),
                       consumer_tocken_secret=os.getenv('CONSUMER_TOCKEN_SECRET'))
 
