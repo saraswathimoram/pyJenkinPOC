@@ -2,7 +2,7 @@
 import os
 import twitter
 def tweet(api, message):
-    """ This function will tweet our message """    
+    """ This function will tweet our message """
     if len(message) == 40:
         message = message.strip(",.!?")       
     if len(message) == 40:
