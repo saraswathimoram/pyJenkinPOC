@@ -9,7 +9,7 @@ class Testcalc(unittest.TestCase):
        self.y = 5
     
     def test_add(self):
-        self.assertEqual(app.add(self.x, self.y), 15)
+        self.assertEqual(app.add(self.x, self.y), 19)
         self.assertEqual(app.add(2,3), 5)
         
     def test_sub(self):
