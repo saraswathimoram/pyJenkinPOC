@@ -1,14 +1,10 @@
+""" This module is for testing jenkins functionality for python coverage"""
 import os
 import twitter
-
-URL = ""
-
-
 def tweet(api, message):
-    print(len(message), 'first----')
+    """ This function will tweet our message """    
     if len(message) == 40:
-        message = message.strip(",.!?")
-        print(message, 'second----')
+        message = message.strip(",.!?")       
     if len(message) == 40:
         message = message.replace("ck)", 'x')
         message = message.replace("ex", 'x')
@@ -21,6 +17,7 @@ def tweet(api, message):
 
 
 def main():
+    """ This function will tweet our message """
     api = twitter.Api(consumer_key=os.getenv('CONSUMER_KEY'),
                       consumer_secret=os.getenv('CONSUMER_SECRET'),
                       consumer_tocken_secret=os.getenv('CONSUMER_TOCKEN_SECRET'))
@@ -28,15 +25,13 @@ def main():
     msg = raw_input('what do you want to tweet?:')
     tweet(api, msg)
 
-colors = ['red', 'blue', 'green', 'yellow']
+COLORS = ['red', 'blue', 'green', 'yellow']
 
-def compare_length(c1, c2):
-    if len(c1)<len(c2):return -1
-    if len(c1)>len(c2): return 1
+def compare_length(color_1, color_2):
+    if len(color_1) < len(color_2): return -1
+    if len(color_1) > len(color_2): return 1
     return 0
-
-
-print(sorted(colors, key=len) )
+print(sorted(COLORS, key=len) )
                       
                       
     
